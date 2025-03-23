@@ -19,6 +19,10 @@
   "homepage": "https://github.com/jasontenpenny/blog.jasontenpenny.com#readme",
   "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "markdown-it-attrs": "^4.3.1",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-task-checkbox": "^1.0.6"
   }
 }

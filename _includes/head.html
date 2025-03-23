@@ -1,5 +1,17 @@
 <html>
     <head>
-        {{ title }}
+        <title>
+            {%- unless layout == 'home' -%}
+                {%- if title -%}
+                    {{ title | append: ' | ' }}
+                {%- endif -%}
+            {%- endunless -%}
+            Jason's Blog
+        </title>
+        <link rel="stylesheet" href="/assets/css/main.css" type="text/css" />
+        <link rel="preconnect" href="https://rsms.me/">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/vscode-dark-theme.css" type="text/css" />
     </head>
     <body>

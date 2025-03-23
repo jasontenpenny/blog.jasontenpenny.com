@@ -1,0 +1,191 @@
+---
+layout: post
+title: Typography Test
+excerpt: "A post that demonstrates all the typographical elements and how they're themed."
+---
+
+This post is to show Markdown syntax rendering. You can also use it as an example of writing. Now, let's start looking at text and typography.
+
+## Headings
+
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+# H1 - heading{: .mt-4 .mb-0}
+
+## H2 - heading{: data-toc-skip='' .mt-4 .mb-0 }
+
+### H3 - heading{: data-toc-skip='' .mt-4 .mb-0 }
+
+#### H4 - heading{: data-toc-skip='' .mt-4 }
+<!-- markdownlint-restore -->
+
+## Paragraph
+
+Quisque egestas convallis ipsum, ut sollicitudin risus tincidunt a. Maecenas interdum malesuada egestas. Duis consectetur porta risus, sit amet vulputate urna facilisis ac. Phasellus semper dui non purus ultrices sodales. Aliquam ante lorem, ornare a feugiat ac, finibus nec mauris. Vivamus ut tristique nisi. Sed vel leo vulputate, efficitur risus non, posuere mi. Nullam tincidunt bibendum rutrum. Proin commodo ornare sapien. Vivamus interdum diam sed sapien blandit, sit amet aliquam risus mattis. Nullam arcu turpis, mollis quis laoreet at, placerat id nibh. Suspendisse venenatis eros eros.
+
+## Lists
+
+### Ordered list
+
+1. Firstly
+2. Secondly
+3. Thirdly
+
+### Unordered list
+
+- Chapter
+  - Section
+    - Paragraph
+
+### ToDo list
+
+- [ ] Job
+  - [x] Step 1
+  - [x] Step 2
+  - [ ] Step 3
+
+### Description list
+
+Sun
+: the star around which the earth orbits
+
+Moon
+: the natural satellite of the earth, visible by reflected light from the sun
+
+## Block Quote
+
+> This line shows the _block quote_. It's actually a very long blockquote so that I can see how word wrapping works since there's not a background color for it. This is the goal, that it wraps as I desire.
+
+## Prompts
+
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+> An example showing the `tip` type prompt.
+{: .prompt-tip }
+
+> An example showing the `info` type prompt.
+{: .prompt-info }
+
+> An example showing the `warning` type prompt.
+{: .prompt-warning }
+
+> An example showing the `error` type prompt.
+{: .prompt-error }
+<!-- markdownlint-restore -->
+
+## Tables
+
+| Company                      | Contact          | Country |
+| :--------------------------- | :--------------- | ------: |
+| Alfreds Futterkiste          | Maria Anders     | Germany |
+| Island Trading               | Helen Bennett    |      UK |
+| Magazzini Alimentari Riuniti | Giovanni Rovelli |   Italy |
+
+## Links
+
+<http://127.0.0.1:4000>
+
+## Footnote
+
+Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
+
+## Inline code
+
+This is an example of `Inline Code`.
+
+## Filepath
+
+Here is the `/path/to/the/file.extend`{: .filepath}.
+
+## Code blocks
+
+### Common
+
+```text
+This is a common code snippet, without syntax highlight and line number.
+```
+
+### Specific Language
+
+```bash
+if [ $? -ne 0 ]; then
+  echo "The command was not successful.";
+  #do the needful / exit
+fi;
+```
+
+### Specific filename
+
+/sass/jekyll-theme-chirpy.scss {: .filename}
+
+```sass {: file='_sass/jekyll-theme-chirpy.scss'}
+@import
+  "colors/light-typography",
+  "colors/dark-typography";
+```
+
+## Mathematics
+
+The mathematics powered by [**MathJax**](https://www.mathjax.org/):
+
+$$
+\begin{equation}
+  \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}
+  \label{eq:series}
+\end{equation}
+$$
+
+We can reference the equation as \eqref{eq:series}.
+
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+## Mermaid SVG
+
+```mermaid
+ gantt
+  title  Adding GANTT diagram functionality to mermaid
+  apple :a, 2017-07-20, 1w
+  banana :crit, b, 2017-07-23, 1d
+  cherry :active, c, after b a, 1d
+```
+
+## Images
+
+### Default (with caption)
+
+![Desktop View](/assets/images/openin4_overview.png)
+_Full screen width and center alignment_
+
+### Left aligned
+
+![Desktop View](/assets/images/openin4_overview.png){: width="972" .w-75 .normal}
+
+### Float to left
+
+![Desktop View](/assets/images/openin4_overview.png){: width="972" .w-50 .left}
+Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
+
+### Float to right
+
+![Desktop View](/assets/images/openin4_overview.png){: width="972" .w-50 .right}
+Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.
+
+### Dark/Light mode & Shadow
+
+The image below will toggle dark/light mode based on theme preference, notice it has shadows.
+
+![light mode only](/assets/images/openin4_overview.png){: .light .w-75 .shadow .rounded-10 w='1212' }
+![dark mode only](/assets/images/openin4_overview.png){: .dark .w-75 .shadow .rounded-10 w='1212' }
+
+## Video
+
+{% comment %}
+{% include embed/youtube.html id='Balreaj8Yqs' %}
+{% endcomment %}
+
+## Reverse Footnote
+
+[^footnote]: The footnote source
+[^fn-nth-2]: The 2nd footnote source

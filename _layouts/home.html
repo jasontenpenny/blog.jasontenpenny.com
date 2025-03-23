@@ -1,0 +1,41 @@
+---
+layout: default.html
+---
+
+<section class="post-list">
+    {%- for post in collections.all reversed -%}
+        <article class="post-entry">
+            <a class="post-link" href="{{ post.url }}">
+                <h2 class="post-title">{{ post.data.title }}</h2>
+            </a>
+            <div class="post-metadata"><i class="fa-solid fa-user icon-post-author"></i><span class="post-author">Jason Tenpenny</span><i class="fa-solid fa-clock icon-post-date"></i><span class="post-date" title="{{ post.date | hoverDate }}">{{ post.date | postDate }}</span>
+            <i class="fa-solid fa-folder-open icon-post-category"></i><span class="post-categories">
+                {%- if post.data.rootCategory -%}
+                    <a class="post-category" href="#">{{ post.data.rootCategory }}</a>
+                    {%- else -%}
+                    <a class="post-category" href="#">General</a>
+                {%- endif -%}
+                {%- if post.data.category -%} &nbsp;&rarr;&nbsp;<a class="post-category" href="#">{{ post.data.category }}</a>
+                {%- endif -%}
+                </span>
+            </div>
+            {%- if post.data.excerpt -%}
+                <div class="post-excerpt">{{ post.data.excerpt }}</div>
+            {%- else -%}
+                <div class="post-excerpt">{{ post.page.excerpt }}</div>
+            {%- endif -%}
+            {%- if post.data.tags -%}
+            <div class="post-metadata">
+            <i class="fa-solid fa-tags icon-post-category"></i><span class="post-tags">
+                {%- for tag in post.data.tags -%}
+                    <a href="{{ tag | slugify }}">{{ tag }}</a>
+                    {%- if not forloop.last -%}&nbsp;,&nbsp;{%- endif -%}
+                {%- endfor -%}
+            </span>
+            </div>
+            {%- endif -%}
+        </article>
+        {%- endfor -%}
+</section>
+
+{{ content }}

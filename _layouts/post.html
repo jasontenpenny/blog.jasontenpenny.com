@@ -1,0 +1,36 @@
+---
+layout: default.html
+permalink: "{%- if rootCategory -%}{{ rootCategory | slugify }}{%- else -%}general{%- endif -%}/{%- if category -%}{{ category | slugify }}/{%- endif -%}{{ title | slugify }}/index.html"
+---
+
+<section class="post-wrapper">
+    <div class="post-header">
+        <h1 class="post-title">{{ title }}</h1>
+        <div class="post-metadata">
+            <i class="fa-solid fa-user icon-post-category"></i><span class="post-author">Jason Tenpenny</span> <i class="fa-solid fa-clock icon-post-category"></i><span class="post-date" title="{{ page.date | hoverDate }}">{{ page.date | postDate }}</span> <i class="fa-solid fa-folder-open icon-post-category"></i><span class="post-categories">
+            {%- if rootCategory -%}
+                <a class="post-rootcategory" href="#">{{ rootCategory }}</a>
+                {%- else -%}
+                <a class="post-rootcategory" href="#">General</a>
+            {%- endif -%}
+            {%- if category -%} &nbsp;&rarr; <a class="post-category" href="#">{{ category }}</a>
+            {%- endif -%}
+            </span>
+            <br />
+            {%- if tags -%}
+            <i class="fa-solid fa-tags icon-post-tags"></i><span class="post-tags">
+                {%- for tag in tags -%}
+                    <a class="post-tag" href="#">{{ tag }}</a>
+                    {%- if not forloop.last -%}
+                        &nbsp;,&nbsp;
+                    {%- endif -%}
+                {%- endfor -%}
+            {%- endif -%}
+            </span>
+        </div>
+    </div>
+    <article class="post-body">
+        {{ content }}
+    </article>
+</section>
+{% include 'post-sidebar.html' %}
